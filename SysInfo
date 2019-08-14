@@ -91,10 +91,11 @@ pause
 function user_info(){
 
 local cmd
-read -p "enter who to view users currently logged on or last for list of users who last logged on" cmd 
+echo  "enter WHO to view users currently logged on or LAST  for list of users who last logged on" 
+read  cmd 
 case $cmd in 
-who) write_header " Who is online "; who -H; pause ;;
-last) write_header " List of last logged in users "; last ; pause ;;
+WHO) write_header " Who is online "; who -H; pause ;;
+LAST) write_header " List of last logged in users "; last ; pause ;;
 esac 
 }
 
